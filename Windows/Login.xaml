@@ -1,0 +1,22 @@
+﻿<Window x:Name="Login1" x:Class="ExamsSystem.Windows.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamsSystem.Windows"
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,0" Background="#FF22313F">
+
+        <Label Content="ACOUNT LOGIN " Margin="201,19,0,0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="198" Foreground="#FFFBFAFA" FontStyle="Italic" BorderBrush="#FFF9F4F4" BorderThickness="0,0,0,3" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Margin="173,95,65,231" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Content="Username :" Margin="12,94,0,0" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="138" Foreground="#FFFBF9F9"/>
+        <Button Content="Login" Margin="384,277,65,29" Background="#FF1D8E0D" FontSize="16" FontWeight="Bold" BorderBrush="#FFF7F5F5" Click="Button_Click"/>
+        <Button Content="Clear" Margin="173,277,268,29" Background="#FFE0624E" FontSize="16" FontWeight="Bold" BorderBrush="#FFFBF9F9" Click="Button_Click_1"/>
+        <Label Content="Password :" Margin="12,0,0,0" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Height="40" Width="138" AllowDrop="True" Foreground="#FFFBFAFA"/>
+        <Image HorizontalAlignment="Left" Height="70" Margin="8,7,0,0" VerticalAlignment="Top" Width="77" Source="/Windows/login1.png" Stretch="Fill"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="40" Margin="173,0,0,0" VerticalAlignment="Center" Width="362" Background="#FFF1ECEC" Foreground="Black" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Exit" Margin="22,277,460,29" Background="#FFF52C0C" FontSize="16" FontWeight="Bold" BorderBrush="#FFFBF9F9" Click="btnExit_Click" />
+
+    </Grid>
+</Window>

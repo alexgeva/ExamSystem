@@ -1,0 +1,33 @@
+﻿<Window x:Class="ExamsSystem.Windows.EditStudentLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamsSystem.Windows"
+        mc:Ignorable="d"
+         Title="Add Student" Height="499" Width="871" WindowStartupLocation="CenterScreen"  >
+    <Grid Margin="39,32,36,334">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="363*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas HorizontalAlignment="Left" Height="483" VerticalAlignment="Top" Width="871" Background="#FF45BBB9" Margin="-38,-32,0,0" Grid.RowSpan="2">
+            <Label Content="Student  Name" Height="36" Canvas.Left="16" Canvas.Top="87" Width="128" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+            <TextBox x:Name="txtStudentName" Height="36" Canvas.Left="149" TextWrapping="Wrap" Canvas.Top="87" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top"  Text="" FontWeight="Bold" FontSize="16" IsEnabled="False"/>
+            <Label Content="Student Id Num" Height="36" Canvas.Left="15" Canvas.Top="150" Width="128" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557"/>
+            <TextBox x:Name="txtStudentIdNum" Height="36" Canvas.Left="149" TextWrapping="Wrap" Canvas.Top="150" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+            <Label Content="User Name" Height="36" Canvas.Left="16" Canvas.Top="211" Width="132" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+            <TextBox x:Name="txtUserName" Height="36" Canvas.Left="149" TextWrapping="Wrap" Canvas.Top="211" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+            <Label Content="Password" Height="36" Canvas.Left="16" Canvas.Top="272" Width="132" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+
+            <Label Content="Edit Student Form" Height="64" Canvas.Left="324" Width="393" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FFF7F5F5" BorderBrush="#FFE2DBDB" VerticalAlignment="Top" FontStyle="Italic" BorderThickness="0,0,0,3" Canvas.Top="8"/>
+            <Button x:Name="btnExit" Content="Exit" Height="75" Canvas.Left="10" Canvas.Top="369" Width="133" FontSize="18" FontWeight="Bold" Background="#FFA08A88" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnExit_Click" />
+            <TextBox x:Name="txtPassword" Height="36" Canvas.Left="149" TextWrapping="Wrap" Canvas.Top="272" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+            <Button x:Name="btnEditSave" Content="Save Student" Height="74" Canvas.Left="534" Canvas.Top="369" Width="148" FontSize="18" FontWeight="Bold" Background="#FF29D424" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnEditSave_Click"/>
+            <DataGrid x:Name="STDataGrid" Height="226" Canvas.Left="324" Canvas.Top="82" Width="519" d:ItemsSource="{d:SampleData ItemCount=4}" HorizontalAlignment="Left" VerticalAlignment="Center" AutomationProperties.IsRowHeader="True" IsReadOnly="True" SelectionChanged="STDataGrid_SelectionChanged" FontSize="14" FontWeight="Bold" AutoGeneratingColumn="STDataGrid_AutoGeneratingColumn" />
+            <Button x:Name="btnEdit" Content="Edit Student" Height="74" Canvas.Left="326" Canvas.Top="369" Width="148" FontSize="18" FontWeight="Bold" Background="#FFB2D424" Click="btnEdit_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+
+    </Grid>
+</Window>

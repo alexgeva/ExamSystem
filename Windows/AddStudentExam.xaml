@@ -1,0 +1,40 @@
+﻿<Window x:Class="ExamsSystem.Windows.AddStudentExam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamsSystem.Windows"
+        mc:Ignorable="d"
+          Title="Add Student Exam" Height="690" Width="1059" WindowStartupLocation="CenterScreen"  >
+    <Grid Margin="39,32,36,0">
+
+
+
+        <Canvas HorizontalAlignment="Left" Height="674" VerticalAlignment="Top" Width="1059" Background="#FF45BBB9" Margin="-40,-32,0,0">
+            <Label Content="Student  Name" Height="36" Canvas.Left="210" Canvas.Top="101" Width="128" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+            <TextBox x:Name="txtStudentName" Height="36" Canvas.Left="343" TextWrapping="Wrap" Canvas.Top="101" Width="157" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="" FontWeight="Bold" FontSize="16"/>
+            <Label Content="Student Id Num" Height="36" Canvas.Left="521" Canvas.Top="101" Width="128" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557"/>
+            <TextBox x:Name="txtStudentIdNum" Height="36" Canvas.Left="668" TextWrapping="Wrap" Canvas.Top="101" Width="157" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+
+            <Label Content=" Student Exam Form" Height="64" Canvas.Left="324" Width="393" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FFF7F5F5" BorderBrush="#FFE2DBDB" VerticalAlignment="Top" FontStyle="Italic" BorderThickness="0,0,0,3" Canvas.Top="2"/>
+            <Button x:Name="btnExit" Content="Exit" Height="75" Canvas.Left="703" Canvas.Top="545" Width="133" FontSize="18" FontWeight="Bold" Background="#FFA08A88" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnExit_Click" />
+            <Label Content="Student Id" Height="36" Canvas.Left="62" Canvas.Top="101" Width="92" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtPersonalId" Height="36" Canvas.Left="156" TextWrapping="Wrap" Canvas.Top="101" Width="37"  Text="" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+            <Button x:Name="btnStart" Content="Start Exam" Height="74" Canvas.Left="156" Canvas.Top="546" Width="148" FontSize="18" FontWeight="Bold" Background="#FFF57164"  RenderTransformOrigin="0.645,0.522" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnStart_Click"/>
+            <Label Content="ExamId" Height="36" Canvas.Left="56" Canvas.Top="155" Width="92" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtExamId" Height="36" Canvas.Left="150" TextWrapping="Wrap" Canvas.Top="155" Width="37"  Text="" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <DataGrid x:Name="EXDataGrid" Height="189" Canvas.Left="24" Canvas.Top="318" Width="971" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.IsRowHeader="True" IsReadOnly="True" SelectionChanged="EXDataGrid_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" />
+            <TextBox x:Name="txtExamName" Height="36" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="155" Width="170"  Text="" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Start Time" Height="36" Canvas.Left="45" Canvas.Top="212" Width="128" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtStartTime" Height="36" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="212" Width="114" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Exam Time(min)" Height="36" Canvas.Left="371" Canvas.Top="212" Width="128" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtExamTime" Height="36" Canvas.Left="504" TextWrapping="Wrap" Canvas.Top="212" Width="72" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="No Of Question" Height="36" Canvas.Left="618" Canvas.Top="212" Width="128" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtnoq" Height="36" Canvas.Left="751" TextWrapping="Wrap" Canvas.Top="212" Width="74" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtScore" Height="36" Canvas.Left="751" TextWrapping="Wrap" Canvas.Top="155" Width="74" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Score" Height="36" Canvas.Left="678" Canvas.Top="155" Width="67" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="select new exam and check the start time - good luck " Height="31" Canvas.Left="66" Canvas.Top="270" Width="369" Background="#FFE2EA64" FontSize="14" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+
+    </Grid>
+</Window>

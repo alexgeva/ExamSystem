@@ -1,0 +1,55 @@
+﻿<Window x:Class="ExamsSystem.Windows.AddQuestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamsSystem.Windows"
+        mc:Ignorable="d"
+        Title="Add Question" Height="819" Width="1000" WindowStartupLocation="CenterScreen"  >
+    <Grid Margin="39,32,36,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="738*"/>
+            <ColumnDefinition Width="187*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="363*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas HorizontalAlignment="Left" Height="803" VerticalAlignment="Top" Width="1046" Background="#FF8FC8C7" Margin="-39,-32,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Label Content="Question" Height="36" Canvas.Left="15" Canvas.Top="82" Width="89" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+            <TextBox x:Name="txtQuestion" Height="36" Canvas.Left="107" TextWrapping="Wrap" Canvas.Top="82" Width="312" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"  Text=""/>
+            <Label Content="Answer 1" Height="36" Canvas.Left="15" Canvas.Top="125" Width="89" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="txtAnswer1" Height="36" Canvas.Left="107" TextWrapping="Wrap" Canvas.Top="125" Width="312" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Answer2" Height="36" Canvas.Left="15" Canvas.Top="167" Width="89" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" Foreground="#FF080505" BorderBrush="Black" RenderTransformOrigin="-3.292,2.557"/>
+            <TextBox x:Name="txtAnswer2" Height="36" Canvas.Left="107" TextWrapping="Wrap" Canvas.Top="167" Width="312" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Answer3" Height="36" Canvas.Left="431" Canvas.Top="125" Width="89" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+            <TextBox x:Name="txtAnswer3" Height="36" Canvas.Left="525" TextWrapping="Wrap" Canvas.Top="125" Width="312" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Answer4" Height="36" Canvas.Left="431" Canvas.Top="167" Width="89" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+
+            <Label Content="Add Question Form" Height="64" Canvas.Left="61" Canvas.Top="5" Width="393" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Foreground="#FFF7F5F5" BorderBrush="#FFE2DBDB" VerticalAlignment="Center" FontStyle="Italic" BorderThickness="0,0,0,3"/>
+            <Button x:Name="btnAdd" Content="Add Question" Height="75" Canvas.Left="408" Canvas.Top="699" Width="148" FontSize="18" FontWeight="Bold" Background="#FF4183D7"  HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnAdd_Click" IsEnabled="False"/>
+            <Button x:Name="btnExit" Content="Exit" Height="75" Canvas.Left="10" Canvas.Top="699" Width="146" FontSize="18" FontWeight="Bold" Background="#FFA08A88" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnExit_Click" />
+            <TextBox x:Name="txtAnswer4" Height="36" Canvas.Left="525" TextWrapping="Wrap" Canvas.Top="167" Width="312" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Good Answer" Height="36" Canvas.Left="15" Canvas.Top="216" Width="115" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.576,-3.943"/>
+            <TextBox x:Name="txtGoodAnswer" Height="36" Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="216" Width="312" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Is Random" Height="36" Canvas.Left="454" Canvas.Top="216" Width="89" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Is Random Question" Height="36" Canvas.Left="581" Canvas.Top="216" Width="165" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="Pic URL" Height="36" Canvas.Left="430" Canvas.Top="82" Width="68" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtUrl" Height="36" Canvas.Left="585" TextWrapping="Wrap" Canvas.Top="84" Width="372" FontWeight="Bold"  Text="" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btn_AddUrl" Content="Add Url" Height="34" Canvas.Left="498" Canvas.Top="84" Width="78" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF68B774" FontWeight="Bold" FontSize="16" Click="btn_AddUrl_Click"/>
+            <CheckBox x:Name="txtIsRandom" Content="" Height="32" Canvas.Left="545" Canvas.Top="220" Width="21" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="txtIsRandom_Checked" Unchecked="txtIsRandom_Unchecked"/>
+            <CheckBox x:Name="txtIsRandomQuestion" Content="" Height="32" Canvas.Left="748" Canvas.Top="220" Width="27" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Checked="txtIsRandomQuestion_Checked" Unchecked="txtIsRandomQuestion_Unchecked"/>
+            <Button x:Name="btnEdit" Content="Edit Question" Height="74" Canvas.Left="614" Canvas.Top="700" Width="148" FontSize="18" FontWeight="Bold" Background="#FF29D424" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnEdit_Click"/>
+            <DataGrid x:Name="QDataGrid" Height="419" Canvas.Left="10" Canvas.Top="267" Width="961" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" VerticalAlignment="Center" AutomationProperties.IsRowHeader="True" IsReadOnly="True" SelectionChanged="QDataGrid_SelectionChanged"/>
+            <Button x:Name="btnDelete" Content="Delete Question" Height="74" Canvas.Left="823" Canvas.Top="700" Width="148" FontSize="18" FontWeight="Bold" Background="#FFF57164"  HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnDelete_Click"/>
+            <Label Content="Id Number" Height="36" Canvas.Left="778" Canvas.Top="216" Width="95" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtId" Height="36" Canvas.Left="878" TextWrapping="Wrap" Canvas.Top="216" Width="74" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
+            <ComboBox x:Name="cmb_Exams" Height="40" Canvas.Left="681" Canvas.Top="23" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="cmb_Exams_SelectionChanged"/>
+            <TextBox x:Name="txt_Exam" Height="36" Canvas.Left="773" TextWrapping="Wrap" Canvas.Top="23" Width="179" FontSize="16" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Content="SELECT EXAM" Height="34" Canvas.Left="537" Canvas.Top="26" Width="127" Background="#FFDED683" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnClear_Data" Content="Clear Data" Height="74" Canvas.Left="200" Canvas.Top="700" Width="148" FontSize="18" FontWeight="Bold" Background="#FFBAD424" Click="btnClear_Data_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+
+    </Grid>
+</Window>

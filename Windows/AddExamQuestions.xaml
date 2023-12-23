@@ -1,0 +1,63 @@
+﻿<Window x:Class="ExamsSystem.Windows.AddExamQuestions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamsSystem.Windows"
+        mc:Ignorable="d"
+       Title="Add Exam Question" Height="860" Width="1340" WindowStartupLocation="CenterScreen"  >
+    <Grid Margin="39,32,36,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="363*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas HorizontalAlignment="Center" Height="844" VerticalAlignment="Top" Width="1343" Background="#FF45BB8D" Margin="0,-32,0,0" Grid.RowSpan="2">
+            <Label Content="IdQuestionNumber" Height="36" Canvas.Left="237" Canvas.Top="87" Width="166" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+            <TextBox x:Name="txtIdQuestion" Height="36" Canvas.Left="403" TextWrapping="Wrap" Canvas.Top="87" Width="52" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"  Text=""/>
+
+            <Label Content="Add Questions To Exams Form" Height="64" Canvas.Left="315" Canvas.Top="5" Width="555" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Foreground="#FFF7F5F5" BorderBrush="#FFE2DBDB" VerticalAlignment="Center" FontStyle="Italic" BorderThickness="0,0,0,3"/>
+            <Button x:Name="btnAdd"  Height="75" Canvas.Left="169" Canvas.Top="740" Width="150" FontSize="18" FontWeight="Bold" Background="#FF4183D7"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnAdd_Click" FontStretch="Expanded">
+                <StackPanel>
+                    <TextBlock Text="Add Temp " />
+                    <TextBlock Text="Question Exam" FontStretch="Normal" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnExit" Content="Exit" Height="75" Canvas.Left="22" Canvas.Top="740" Width="133" FontSize="18" FontWeight="Bold" Background="#FFA08A88" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnExit_Click" />
+            <Button x:Name="btnEdit"  Height="75" Canvas.Left="330" Canvas.Top="740" Width="150" FontSize="18" FontWeight="Bold" Background="#FF29D424" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnEdit_Click">
+                <StackPanel>
+                    <TextBlock Text="Edit Temp " />
+                    <TextBlock Text="Question Exam" />
+                </StackPanel>
+            </Button>
+            <DataGrid x:Name="EXDataGrid" Height="164" Canvas.Left="27" Canvas.Top="140" Width="1005" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" VerticalAlignment="Center" AutomationProperties.IsRowHeader="True" IsReadOnly="True" SelectionChanged="EXDataGrid_SelectionChanged" AutoGeneratingColumn="EXDataGrid_AutoGeneratingColumn" FontWeight="Bold" FontSize="14" />
+            <Button x:Name="btnDelete" Height="75" Canvas.Left="661" Canvas.Top="740" Width="150" FontSize="18" FontWeight="Bold" Background="#FFF57164"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnDelete_Click">
+                <StackPanel>
+                    <TextBlock Text="Delete Temp " />
+                    <TextBlock Text="Question Exam" />
+                </StackPanel>
+            </Button>
+            <Label Content="IdExamNumber" Height="36" Canvas.Left="43" Canvas.Top="87" Width="131" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtIdExam" Height="31" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="92" Width="44" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <DataGrid x:Name="QDataGrid" Height="407" Canvas.Left="27" Canvas.Top="318" Width="1005" d:ItemsSource="{d:SampleData ItemCount=2}" AutomationProperties.IsRowHeader="True" IsReadOnly="True" SelectionChanged="QDataGrid_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <DataGrid x:Name="EXQDataGrid" Height="551" Canvas.Left="1059" Canvas.Top="174" Width="111" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.IsRowHeader="True" IsReadOnly="True" SelectionChanged="EXQDataGrid_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" AutoGeneratingColumn="EXQDataGrid_AutoGeneratingColumn" />
+            <Label Content="Question count" Height="36" Canvas.Left="793" Canvas.Top="87" Width="126" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtCount" Height="36" Canvas.Left="924" TextWrapping="Wrap" Canvas.Top="87" Width="50" FontWeight="Bold"  Text="" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.815,0.441"/>
+            <Button x:Name="btnClear" Content="Clear Data" Height="37" Canvas.Left="673" Canvas.Top="86" Width="99" FontSize="18" FontWeight="Bold" Background="#FFA08A88" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnClear_Click" />
+            <Label Content="Num of Questions" Height="36" Canvas.Left="474" Canvas.Top="84" Width="151" FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtINumOfQuestion" Height="31" Canvas.Left="630" TextWrapping="Wrap" Canvas.Top="89" Width="34" FontSize="16" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnAdd_Random"  Height="75" Canvas.Left="492" Canvas.Top="740" Width="160" FontSize="18" FontWeight="Bold" Background="#FFD8C81E" Click="btnAdd_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel>
+                    <TextBlock Text="Add Temp" />
+                    <TextBlock Text="Random Question" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnSave" Content="Save Exam" Height="75" Canvas.Left="824" Canvas.Top="740" Width="143" FontSize="24" FontWeight="Bold" Background="#FF87CAAA"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnSave_Click" IsEnabled="False"/>
+            <DataGrid x:Name="EXQDataGridReal" Height="551" Canvas.Left="1197" Canvas.Top="174" Width="111" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.IsRowHeader="True" IsReadOnly="True" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" AutoGeneratingColumn="EXQDataGridReal_AutoGeneratingColumn" />
+            <Label Content="TEMP TABLE" Height="36" Canvas.Left="1062" Canvas.Top="133" Width="105" FontSize="16" BorderThickness="0,0,0,2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold"/>
+            <Label Content="REAL TABLE" Height="36" Canvas.Left="1201" Canvas.Top="133" Width="118" FontSize="16" BorderThickness="0,0,0,2" BorderBrush="Black" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+
+    </Grid>
+</Window>
+
